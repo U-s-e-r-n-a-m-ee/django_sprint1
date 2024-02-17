@@ -9,17 +9,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/fav/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/fav/favicon-16x16.png' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>
     {% block title %}
-    <h1>Ничего не нашлось</h1>
     {% endblock %}
+    </title>
   </head>
   <body>	
     {% include "includes/header.html" %}
     <main>
       <div class="container py-5">
         {% block content %}
-        Пусто
-        {% endblock %}         
+        {% endblock %}
       </div>
     </main>
     {% include "includes/footer.html" %}
