@@ -50,7 +50,7 @@ post_dict = {post['id']: post for post in posts}
 
 
 def post_detail(request, id):
-    if id not in post_dict.keys():
+    if id not in post_dict:
         raise Http404('Вы ввели неверный id')
     context = {'post': post_dict[id]}
     return render(request, 'blog/detail.html', context)
